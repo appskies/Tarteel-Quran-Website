@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tarteel - AI Quran Reader with Athkar, Dua, Prayer Times, Tafsir and Khatmah Tracker. Begin your peaceful Quran journey with beautiful recitations.">
+    <meta name="keywords" content="quran, quran reader, tarteel, athkar, dua, prayer times, tafsir, khatmah, islamic app, muslim app, adhan, salat">
+    <meta name="author" content="Tarteel">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tarteelquran.app/">
+    <meta property="og:title" content="Tarteel - AI Quran Reader">
+    <meta property="og:description" content="Begin your peaceful Quran journey. Quran Reading, Tarteel Recitations, Athkar, Dua & Prayer Times.">
+    <meta property="og:image" content="Assets/hero.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tarteelquran.app/">
+    <meta property="twitter:title" content="Tarteel - AI Quran Reader">
+    <meta property="twitter:description" content="Begin your peaceful Quran journey. Quran Reading, Tarteel Recitations, Athkar, Dua & Prayer Times.">
+    <meta property="twitter:image" content="Assets/hero.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Assets/app-icon.png">
+    <link rel="apple-touch-icon" href="Assets/app-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Tarteel - AI Quran Reader</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="/" class="navbar-brand">
+                <img src="Assets/app-icon.png" alt="Tarteel Logo" class="navbar-logo">
+                <span class="navbar-name">Tarteel</span>
+            </a>
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="/" class="navbar-link">Home</a>
+                <a href="#features" class="navbar-link">Features</a>
+                <a href="mailto:appskiesltd@gmail.com" class="navbar-link">Contact</a>
+                <a href="https://apps.apple.com/us/app/ai-quran-reader-athkar-dua/id6749589788" class="navbar-cta">
+                    <img src="Assets/app-store-badge.svg" alt="Download on the App Store" class="navbar-badge">
+                </a>
+            </div>
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu">
+                <span class="navbar-toggle-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="stars"></div>
+            <div class="stars2"></div>
+            <div class="stars3"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Begin Your <span class="highlight">Peaceful</span> Quran Journey</h1>
+                <p class="hero-subtitle">Experience the beauty of Quran reading with AI-powered features. Tarteel recitations, Athkar, Dua, Prayer Times & Khatmah Tracker - all in one app.</p>
+                <div class="hero-cta">
+                    <a href="https://apps.apple.com/us/app/ai-quran-reader-athkar-dua/id6749589788?itscg=30200&itsct=apps_box_badge&mttnsubad=6749589788" class="app-store-link">
+                        <img src="Assets/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge">
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-icon">&#9733;</span>
+                        <span class="stat-value">4.8</span>
+                        <span class="stat-label">App Store Rating</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-icon">&#128214;</span>
+                        <span class="stat-value">114</span>
+                        <span class="stat-label">Surahs Available</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-slider">
+                    <img src="Assets/hero.webp" alt="Tarteel Quran App Screenshot" class="phone-mockup hero-slide active" data-index="0">
+                    <img src="Assets/feature-reading.webp" alt="Easy Quran Reading" class="phone-mockup hero-slide" data-index="1">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Discover Your Path</h2>
+            <p class="section-subtitle">Everything you need for your spiritual journey</p>
+
+            <div class="features-grid">
+                <!-- Feature 1: Prayer Times & Journey -->
+                <div class="feature-card full-width">
+                    <div class="feature-image large">
+                        <img src="Assets/feature-prayer-journey.webp" alt="Prayer Times and Quran Journey">
+                    </div>
+                    <div class="feature-content">
+                        <span class="feature-icon">&#128336;</span>
+                        <h3 class="feature-title">Prayer Times & Adhan Reminders</h3>
+                        <p class="feature-description">Track the latest Adhan times and never miss a prayer. Stay consistent with timely prayer notifications. Begin your Quran journey today!</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Athkar & Tafsir -->
+                <div class="feature-card full-width">
+                    <div class="feature-image large">
+                        <img src="Assets/feature-athkar-tafsir.webp" alt="Athkar and Tafsir">
+                    </div>
+                    <div class="feature-content">
+                        <span class="feature-icon">&#10026;</span>
+                        <h3 class="feature-title">Daily Athkar & Tafsir</h3>
+                        <p class="feature-description">Access morning and evening Athkar with translations. Dive deep into Quranic understanding with comprehensive Tafsir explanations.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Dua & Khatmah -->
+                <div class="feature-card full-width">
+                    <div class="feature-image large">
+                        <img src="Assets/feature-dua-khatmah.webp" alt="Dua and Khatmah Tracker">
+                    </div>
+                    <div class="feature-content">
+                        <span class="feature-icon">&#128591;</span>
+                        <h3 class="feature-title">Dua Collection & Khatmah Tracker</h3>
+                        <p class="feature-description">Browse through beautiful Duas for every occasion. Track your Quran reading progress with the Khatmah tracker and complete your journey.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Tarteel Section -->
+    <section class="why-tarteel" id="why">
+        <div class="container">
+            <h2 class="section-title">Why Choose Tarteel?</h2>
+            <p class="section-subtitle">Your complete Islamic companion</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <span class="benefit-icon">&#127775;</span>
+                    <h3 class="benefit-title">Beautiful Recitations</h3>
+                    <p class="benefit-description">Listen to Quran in Tarteel style with multiple renowned Qaris. Experience the beauty of proper Tajweed recitation.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <span class="benefit-icon">&#128274;</span>
+                    <h3 class="benefit-title">Offline Access</h3>
+                    <p class="benefit-description">Download and access the Quran anywhere, anytime. No internet required for your daily reading and reflection.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <span class="benefit-icon">&#127760;</span>
+                    <h3 class="benefit-title">Multi-Language Support</h3>
+                    <p class="benefit-description">Read translations in multiple languages. Understand the meaning of every verse with clear explanations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="reviews">
+        <div class="container">
+            <h2 class="section-title">What Our Users Say</h2>
+            <p class="section-subtitle">Join thousands of Muslims worldwide</p>
+
+            <div class="testimonials-slider">
+                <button class="slider-arrow slider-prev" aria-label="Previous testimonial">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </button>
+
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <div class="testimonial-card" data-index="0">
+                            <div class="testimonial-quote">"</div>
+                            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <p class="testimonial-text">"This app has transformed my daily Quran reading routine. The large text is easy on my eyes, and the Tarteel recitations are absolutely beautiful. I use it every day after Fajr."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">&#128104;</div>
+                                <span class="author-name">Ahmed K.</span>
+                                <span class="author-location">Dubai, UAE</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card" data-index="1">
+                            <div class="testimonial-quote">"</div>
+                            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <p class="testimonial-text">"The prayer time notifications are incredibly accurate! I never miss a prayer anymore. The Athkar section has also become part of my morning and evening routine."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">&#128105;</div>
+                                <span class="author-name">Fatima A.</span>
+                                <span class="author-location">London, UK</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card" data-index="2">
+                            <div class="testimonial-quote">"</div>
+                            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <p class="testimonial-text">"I love the Khatmah tracker! It keeps me motivated to complete my Quran reading goals. The interface is clean and the app never crashes. Highly recommended!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">&#128104;</div>
+                                <span class="author-name">Omar M.</span>
+                                <span class="author-location">Istanbul, Turkey</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card" data-index="3">
+                            <div class="testimonial-quote">"</div>
+                            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <p class="testimonial-text">"The Tafsir feature helped me understand the Quran on a deeper level. It's like having a scholar in my pocket. The app is a blessing for every Muslim."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">&#128105;</div>
+                                <span class="author-name">Aisha R.</span>
+                                <span class="author-location">Cairo, Egypt</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card" data-index="4">
+                            <div class="testimonial-quote">"</div>
+                            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <p class="testimonial-text">"As a revert, this app has been invaluable for my Islamic journey. The Dua collection and translations make it easy to learn and practice. JazakAllah khair!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">&#128104;</div>
+                                <span class="author-name">James (Yusuf) L.</span>
+                                <span class="author-location">Toronto, Canada</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card" data-index="5">
+                            <div class="testimonial-quote">"</div>
+                            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <p class="testimonial-text">"Finally an app that has everything! Quran, Athkar, Prayer Times, Duas - all beautifully designed. The offline feature is perfect for traveling. MashaAllah!"</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">&#128105;</div>
+                                <span class="author-name">Mariam H.</span>
+                                <span class="author-location">Kuala Lumpur, Malaysia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider-arrow slider-next" aria-label="Next testimonial">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+
+                <div class="slider-dots">
+                    <button class="slider-dot active" data-index="0" aria-label="Go to testimonial 1"></button>
+                    <button class="slider-dot" data-index="1" aria-label="Go to testimonial 2"></button>
+                    <button class="slider-dot" data-index="2" aria-label="Go to testimonial 3"></button>
+                    <button class="slider-dot" data-index="3" aria-label="Go to testimonial 4"></button>
+                    <button class="slider-dot" data-index="4" aria-label="Go to testimonial 5"></button>
+                    <button class="slider-dot" data-index="5" aria-label="Go to testimonial 6"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Store Rating Section -->
+    <section class="app-rating">
+        <div class="container">
+            <div class="rating-card">
+                <div class="rating-content">
+                    <div class="rating-stars">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </div>
+                    <div class="rating-score">4.8 <span class="rating-max">/ 5</span></div>
+                    <p class="rating-text">Based on App Store reviews</p>
+                    <p class="rating-subtext">Join thousands of Muslims enriching their faith</p>
+                </div>
+                <div class="rating-badges">
+                    <a href="https://apps.apple.com/us/app/ai-quran-reader-athkar-dua/id6749589788?itscg=30200&itsct=apps_box_badge&mttnsubad=6749589788" class="app-store-link">
+                        <img src="Assets/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge-large">
+                    </a>
+                    <div class="qr-code">
+                        <img src="Assets/qr-code-5.png" alt="Scan to Download">
+                        <span>Scan to download</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="cta-title">Start Your Quran Journey Today</h2>
+            <p class="cta-subtitle">Download Tarteel and enrich your life with the Quran</p>
+            <a href="https://apps.apple.com/us/app/ai-quran-reader-athkar-dua/id6749589788?itscg=30200&itsct=apps_box_badge&mttnsubad=6749589788" class="app-store-link">
+                <img src="Assets/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge">
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="Assets/app-icon.png" alt="Tarteel Logo" class="footer-logo">
+                    <span class="footer-name">Tarteel</span>
+                </div>
+                <nav class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="mailto:appskiesltd@gmail.com">Contact</a>
+                </nav>
+                <p class="footer-copyright">&copy; 2024 Tarteel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
