@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Tarteel Quran - Get in touch with us for support or inquiries.">
+    <title>Contact Us - Tarteel Quran</title>
+    <link rel="icon" type="image/png" href="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d6/0e/f9/d60ef931-fde5-4c47-b6cd-9b88e9f39b58/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/540x540bb.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="/" class="navbar-brand">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d6/0e/f9/d60ef931-fde5-4c47-b6cd-9b88e9f39b58/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/540x540bb.jpg" alt="Tarteel Quran Logo" class="navbar-logo">
+                <span class="navbar-name">Tarteel Quran</span>
+            </a>
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="contact.html" class="navbar-link active">Contact</a>
+                <a href="https://apps.apple.com/us/app/tarteel-quran-recite-memorize/id6736780103" class="navbar-cta">
+                    <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/white/en-us?releaseDate=1686787200" alt="Download" class="navbar-badge">
+                </a>
+            </div>
+            <button class="navbar-toggle" id="navbarToggle"><span class="navbar-toggle-icon"></span></button>
+        </div>
+    </nav>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-header">
+                <h1 class="section-title">Get In <span class="highlight">Touch</span></h1>
+                <p class="section-subtitle">Have questions? We'd love to hear from you.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <span class="info-icon">✉️</span>
+                        <div>
+                            <h3>Email</h3>
+                            <p>appskiesltd@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-icon">📖</span>
+                        <div>
+                            <h3>Quick Response</h3>
+                            <p>We typically respond within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="e549a701-abc5-4e7c-9537-79efd76bed1f">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Your message..." rows="5" required></textarea>
+                        </div>
+                        <div class="h-captcha" data-captcha="true"></div>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loader" style="display: none;"><span class="spinner"></span> Sending...</span>
+                        </button>
+                        <div id="formStatus" class="form-status" style="display: none;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d6/0e/f9/d60ef931-fde5-4c47-b6cd-9b88e9f39b58/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/540x540bb.jpg" alt="Tarteel Quran Logo" class="footer-logo">
+                    <span class="footer-name">Tarteel Quran</span>
+                </div>
+                <nav class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <p class="footer-copyright">&copy; 2024 Tarteel Quran. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+</body>
+</html>
