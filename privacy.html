@@ -33,18 +33,20 @@
 
   <h2>1. Introduction</h2>
   <p>This Privacy Policy explains how we ("we," "our," or "us," the developer of the <strong>Quran AI (AI Quran Reader)</strong> mobile application, the "App") collect, use, and share information when you use the App, available on the Apple App Store and on Google Play (Android package <code>com.skiestech.aiquran</code>). By downloading, installing, or using the App, you acknowledge that you have read and understood this Privacy Policy. If you do not agree, please do not use the App.</p>
+  <p><strong>Who we are:</strong> Appskies is the developer and data controller responsible for your personal data. You can contact us at Salih Kanat Sk., Özlem Apt. D:2, Girne/KKTC, Mersin 10, Türkiye, or by email at <a href="mailto:appskiesltd@gmail.com">appskiesltd@gmail.com</a>.</p>
 
   <h2>2. Information We Collect</h2>
 
   <h3>2.1 Information You Provide</h3>
   <p>The App does <strong>not</strong> require you to create an account. You can use it with an automatically generated anonymous identifier, and we do not collect a username or password. You may optionally provide:</p>
   <ul>
-    <li><strong>Email address (optional):</strong> If you choose to enter it during onboarding or when contacting us, we use it to send you relevant updates and reply to support requests. The current App stores an onboarding email in our Firebase database and a local support-reply cache; it does not forward newly submitted emails to subscription or attribution providers. You can skip this — the App works fully without it.</li>
+    <li><strong>Email address (optional):</strong> If you choose to enter it during onboarding or when contacting us, we use it to send you relevant updates and reply to support requests. On iOS, the App stores an onboarding email in our Firebase database and a local support-reply cache; it does not forward newly submitted emails to subscription or attribution providers. On Android, an onboarding email is kept on your device only and is not written to Firebase or sent to subscription or attribution providers. You can skip this — the App works fully without it.</li>
     <li><strong>Support communications:</strong> The content of messages you send us for support or feedback, together with basic diagnostic details you agree to attach (app version, device model, OS version, language, and subscription status).</li>
-    <li><strong>AI assistant input:</strong> The messages you type into the in-app AI assistant, which are sent to our AI service provider to generate a response (see §4 and §9).</li>
+    <li><strong>AI assistant input:</strong> The messages you type into the in-app AI assistant, which are sent to our AI service provider to generate a response (see §9).</li>
     <li><strong>Referral information:</strong> Earlier App versions may have associated referral credits and the history of promo codes used with your anonymous app identifier.</li>
-    <li><strong>Preferences &amp; reading progress:</strong> Your settings, bookmarks, reading goals, and Khatmah/tracking progress, stored on your device and/or associated with your anonymous identifier.</li>
+    <li><strong>Preferences &amp; reading progress:</strong> Your settings, bookmarks, reading goals, and Khatmah/tracking progress, stored on your device.</li>
   </ul>
+  <p><strong>Anonymous sign-in:</strong> Firebase anonymous sign-in assigns a pseudonymous identifier (a Firebase UID), rather than creating a named account. On Android, Firebase App Check uses Google Play Integrity to attest requests from the App.</p>
 
   <h3>2.2 Information Collected Automatically</h3>
   <ul>
@@ -52,20 +54,23 @@
     <li><strong>Usage &amp; analytics data:</strong> How you interact with the App — features used, screens viewed, and session information — to understand and improve the App.</li>
     <li><strong>Diagnostic &amp; crash data:</strong> Crash reports and technical logs used to diagnose and fix problems.</li>
     <li><strong>Location:</strong> If you grant location permission, the App uses your device location to calculate local prayer times and the Qibla direction. The App sends a derived city/country to its prayer-time content provider rather than your raw coordinates. Advertising and attribution providers may also infer an approximate location from network or device signals, subject to your choices and their policies.</li>
-    <li><strong>Purchase information:</strong> Records of in-app purchases and subscriptions. Payment is processed by Apple; we do not receive your payment card details.</li>
+    <li><strong>Purchase information:</strong> Records of in-app purchases and subscriptions, where offered. Payment is processed by the relevant app store (Apple App Store or Google Play); we do not receive your payment card details.</li>
   </ul>
 
   <h3>2.3 Information We Do NOT Collect</h3>
   <ul>
     <li>We do not access your contacts, calendar, photos, or other personal files.</li>
-    <li>We do not collect payment card information — all payments are processed by Apple.</li>
+    <li>We do not collect payment card information — all payments are processed by the relevant app store (Apple App Store or Google Play).</li>
   </ul>
+
+  <h3>2.4 Information About Religious Beliefs</h3>
+  <p>Questions you type and your worship and reading records may reveal your religious beliefs. Your worship and reading records are kept on your device. AI questions are sent only when you ask a question in the assistant, including when you select a suggested question (see §9).</p>
 
   <h2>3. How We Use Your Information</h2>
   <ul>
     <li><strong>Service delivery:</strong> To provide and maintain the App's features — Quran reading, Athkar, Duas, prayer times, Qibla, the AI assistant, and Ramadan tools.</li>
     <li><strong>Personalization:</strong> To tailor content and settings to your preferences.</li>
-    <li><strong>Purchases:</strong> To process and restore your subscriptions and in-app purchases.</li>
+    <li><strong>Purchases:</strong> To process and restore your subscriptions and in-app purchases, where these features are offered.</li>
     <li><strong>Communication:</strong> To send technical notices and respond to your support requests.</li>
     <li><strong>Analytics &amp; improvement:</strong> To understand usage and improve the App.</li>
     <li><strong>Advertising:</strong> To display and measure ads, including — with your permission — personalized ads (see §4).</li>
@@ -95,11 +100,12 @@
   <h2>6. Data Retention</h2>
   <ul>
     <li><strong>On-device data</strong> (preferences, bookmarks, reading progress) remains on your device and is removed when you delete the App.</li>
-    <li><strong>Optional email, referral records, and Firebase guest account</strong> are retained until you use <strong>Settings › Delete My Data</strong> (where available in your installed version) or ask us to delete them. The authenticated in-app flow removes the app-owned Firestore email record, referral credits and used promo-code history; queues a best-effort removal request for any email attribute an earlier App version sent to RevenueCat; deletes the Firebase Authentication guest account; and clears the locally cached email. RevenueCat's public SDK does not provide provider-side confirmation for that attribute request, so contact us at the address in §13 if you require confirmed provider deletion. A new Firebase guest session is then created so the App can continue operating.</li>
-    <li><strong>Subscription continuity:</strong> Deleting the Firebase guest account does not cancel an App Store subscription. RevenueCat retains a pseudonymous subscriber identifier and purchase/subscription history so paid access and purchase restoration continue to work. Newly submitted emails are not sent to RevenueCat.</li>
-    <li><strong>Interrupted deletion recovery:</strong> The App temporarily stores the deletion phase and old anonymous Firebase identifier on your device so an interrupted account deletion can finish on the next launch. After Firebase confirms account deletion, this recovery state is removed when a fresh guest session is created; it is not uploaded as a deletion receipt. If Firebase invalidates the local session without confirming server-side account deletion, the App conservatively keeps the old anonymous identifier on the device as a support reference, clearly reports that deletion is unconfirmed, and restores a separate usable guest session.</li>
+    <li><strong>Optional email, referral records, and Firebase guest account:</strong> On iOS, these are retained until you use <strong>Settings › Delete My Data</strong> (where available in your installed version) or ask us to delete them. The authenticated in-app flow removes the app-owned Firestore email record, referral credits and used promo-code history; queues a best-effort removal request for any email attribute an earlier App version sent to RevenueCat; deletes the Firebase Authentication guest account; and clears the locally cached email. RevenueCat's public SDK does not provide provider-side confirmation for that attribute request, so contact us at the address in §13 if you require confirmed provider deletion. A new Firebase guest session is then created so the App can continue operating. On Android, request deletion of your Firebase guest account and associated app-held data by emailing <a href="mailto:appskiesltd@gmail.com">appskiesltd@gmail.com</a>; the onboarding email remains on your device only.</li>
+    <li><strong>AI usage counters:</strong> On Android, each daily AI usage counter in Firestore is set to expire approximately 72 hours after its last update and is automatically removed through an enabled time-to-live (TTL) policy. These counters contain usage metadata only, not your question or reply text.</li>
+    <li><strong>Subscription continuity:</strong> Deleting the Firebase guest account does not cancel a subscription through the Apple App Store or Google Play. Where RevenueCat manages a subscription, it retains a pseudonymous subscriber identifier and purchase/subscription history so paid access and purchase restoration continue to work. Newly submitted emails are not sent to RevenueCat.</li>
+    <li><strong>Interrupted deletion recovery:</strong> On iOS, the App temporarily stores the deletion phase and old anonymous Firebase identifier on your device so an interrupted account deletion can finish on the next launch. After Firebase confirms account deletion, this recovery state is removed when a fresh guest session is created; it is not uploaded as a deletion receipt. If Firebase invalidates the local session without confirming server-side account deletion, the App conservatively keeps the old anonymous identifier on the device as a support reference, clearly reports that deletion is unconfirmed, and restores a separate usable guest session.</li>
     <li><strong>Analytics/diagnostic data</strong> is retained for a limited period in accordance with our providers' policies and, where applicable, in aggregated or de-identified form.</li>
-    <li><strong>Transaction and subscription records</strong> are retained by Apple, RevenueCat, and us as needed to provide purchase access, restore purchases, prevent fraud, and meet financial, tax, or other legal obligations.</li>
+    <li><strong>Transaction and subscription records</strong> are retained by the relevant app store (Apple or Google Play), RevenueCat where used, and us as needed to provide purchase access, restore purchases, prevent fraud, and meet financial, tax, or other legal obligations.</li>
   </ul>
 
   <h2>7. Data Storage and Security</h2>
@@ -112,17 +118,50 @@
   <p>The App uses the following third-party services, each governed by its own privacy policy:</p>
   <ul>
     <li><strong>Apple</strong> — app distribution, in-app purchases, and subscriptions.</li>
-    <li><strong>Google Firebase</strong> — anonymous authentication and cloud database (for your optional email, referral records, and app configuration); on iOS, also analytics and crash reporting; and, on Android, Firebase App Check (Google Play Integrity) for device-integrity attestation of the AI assistant.</li>
+    <li><strong>Google Play</strong> — app distribution and, where offered, in-app purchases and subscriptions.</li>
+    <li><strong>Google Firebase</strong> — anonymous authentication and app configuration. On iOS, Firebase also stores your optional email and referral records and provides analytics and crash reporting. On Android, Firebase hosts the AI callable and daily usage counters and provides App Check (Google Play Integrity) for request attestation; it does not store your onboarding email.</li>
     <li><strong>Unity LevelPlay (ironSource)</strong> and its demand partners — advertising delivery and measurement (see §4).</li>
     <li><strong>AppsFlyer</strong> — install and session attribution (see §4).</li>
-    <li><strong>RevenueCat</strong> — subscription management and related pseudonymous analytics. The current App does not send newly submitted email addresses to RevenueCat. For an email sent by an earlier version, the authenticated in-app flow queues a best-effort removal request through the RevenueCat SDK; because the SDK does not expose provider-side confirmation, contact us if you require confirmed provider deletion.</li>
-    <li><strong>Our AI service provider</strong> — processes the messages you send to the in-app AI assistant to generate responses.</li>
+    <li><strong>RevenueCat</strong> — subscription management and related pseudonymous analytics, where used. The current App does not send newly submitted email addresses to RevenueCat. On iOS, for an email sent by an earlier version, the authenticated in-app flow queues a best-effort removal request through the RevenueCat SDK; because the SDK does not expose provider-side confirmation, contact us if you require confirmed provider deletion.</li>
+    <li><strong>OpenAI</strong> — processes the messages you send to the in-app AI assistant to generate responses. On iOS, <strong>AIProxy</strong> relays these requests to OpenAI.</li>
     <li><strong>Content providers</strong> — public APIs used to deliver prayer-time calculations and Quran recitation/text content.</li>
   </ul>
 
+  <h3>AI Assistant Data</h3>
+  <p>On Android, your current message is sent to our Firebase HTTPS callable <code>aiChat</code> in the <code>us-central1</code> region, which calls OpenAI on the server with your message and a server-side instruction. On iOS, your current message is sent through AIProxy to OpenAI. We do not attach your email, location, purchase data, past chat history, or Firebase UID to the request sent to OpenAI; anything you include in the current message itself is sent as part of that message.</p>
+  <p>On Android, questions are sent only when you ask a question in the assistant. This includes selecting a suggested question. On Android, our server records a daily usage counter linked to your pseudonymous Firebase UID and operational metadata (request outcome, model, input character count, token counts, and latency), but does not record the message or reply text.</p>
+  <p>OpenAI states that data submitted through its API is not used to train its models unless you opt in, and that limited abuse-monitoring logs may be retained, normally for up to 30 days, with exceptions described in its <a href="https://developers.openai.com/api/docs/guides/your-data">API data-usage policy</a>. These logs may include message and reply content. On Android, our OpenAI requests set <code>store: false</code> to limit application-state retention; this does not disable OpenAI's abuse-monitoring logs.</p>
+
   <h2>10. Your Privacy Rights</h2>
   <p>Depending on your location, you may have the right to access, correct, or delete your personal data, to object to or restrict certain processing, to data portability, and to withdraw consent. Because the App does not use traditional accounts, most of your data is either stored on your device or associated with an anonymous identifier.</p>
-  <p><strong>In-app deletion:</strong> If your installed version includes <strong>Settings › Delete My Data</strong>, use it to delete your optional app-owned cloud email, referral credits and used promo-code history, your Firebase Authentication guest account, and the locally cached email. The authenticated App deletes its own Firestore records, queues and attempts to sync a best-effort RevenueCat request to remove any legacy email attribute, deletes the current anonymous Firebase account, and creates a new guest session so the App remains usable. RevenueCat's SDK does not expose provider-side confirmation of that attribute request; contact us at the address in §13 if you require confirmed removal by the provider. If interrupted, the App retains an on-device recovery phase until the operation finishes. If Firebase removes the local credential without confirming server-side account deletion, the App does not claim success: it retains the old anonymous identifier on the device as the support reference shown to you and restores a separate guest session. This does not delete the pseudonymous RevenueCat subscriber identifier or Apple/RevenueCat purchase history needed for subscription access and restoration; it does not cancel an App Store subscription or erase preferences and reading progress stored only on your device. Delete the App to remove that on-device data, and manage or cancel subscriptions through Apple.</p>
+
+  <h3>EEA/UK Users (GDPR)</h3>
+  <p>Where the GDPR applies, your rights include:</p>
+  <ul>
+    <li><strong>Access:</strong> Request access to and a copy of your personal data.</li>
+    <li><strong>Rectification:</strong> Ask us to correct inaccurate or incomplete personal data.</li>
+    <li><strong>Erasure:</strong> Request deletion of your personal data.</li>
+    <li><strong>Restriction:</strong> Ask us to restrict processing of your personal data.</li>
+    <li><strong>Portability:</strong> Request your data in a structured, commonly used, machine-readable format and its transfer to another controller where applicable.</li>
+    <li><strong>Objection:</strong> Object to processing of your personal data, including for direct marketing.</li>
+    <li><strong>Withdraw consent:</strong> Withdraw consent at any time where processing relies on it, without affecting the lawfulness of processing before withdrawal.</li>
+    <li><strong>Complaint:</strong> Lodge a complaint with a data-protection supervisory authority.</li>
+  </ul>
+
+  <h3>California Residents (CCPA/CPRA)</h3>
+  <p>Where the CCPA/CPRA applies, your rights include:</p>
+  <ul>
+    <li><strong>Know:</strong> Request information about the personal information we collect, use, and disclose, including a copy of that information.</li>
+    <li><strong>Delete:</strong> Request deletion of your personal information.</li>
+    <li><strong>Correct:</strong> Ask us to correct inaccurate personal information.</li>
+    <li><strong>Opt out:</strong> Opt out of the sale or sharing of your personal information.</li>
+  </ul>
+  <p>You can exercise these rights by emailing <a href="mailto:appskiesltd@gmail.com">appskiesltd@gmail.com</a>. We will not discriminate against you for exercising your privacy rights.</p>
+
+  <h3>Deletion and Other Requests</h3>
+  <p><strong>In-app deletion:</strong> On iOS, if your installed version includes <strong>Settings › Delete My Data</strong>, use it to delete your optional app-owned cloud email, referral credits and used promo-code history, your Firebase Authentication guest account, and the locally cached email. The authenticated App deletes its own Firestore records, queues and attempts to sync a best-effort RevenueCat request to remove any legacy email attribute, deletes the current anonymous Firebase account, and creates a new guest session so the App remains usable. RevenueCat's SDK does not expose provider-side confirmation of that attribute request; contact us at the address in §13 if you require confirmed removal by the provider. If interrupted, the App retains an on-device recovery phase until the operation finishes. If Firebase removes the local credential without confirming server-side account deletion, the App does not claim success: it retains the old anonymous identifier on the device as the support reference shown to you and restores a separate guest session.</p>
+  <p><strong>Android deletion:</strong> On Android, request deletion of your Firebase guest account and associated app-held data by emailing <a href="mailto:appskiesltd@gmail.com">appskiesltd@gmail.com</a>. On Android, there is no in-app account-deletion option.</p>
+  <p><strong>What deletion does not remove:</strong> Deleting app-held data or your Firebase guest account does not delete the pseudonymous RevenueCat subscriber identifier or purchase history held by your app store (Apple or Google Play) or RevenueCat, where used, for subscription access and restoration; it does not cancel a store subscription or erase preferences and reading progress stored only on your device. Delete the App to remove that on-device data, and manage or cancel subscriptions through the store where you purchased them.</p>
   <p><strong>Additional requests and earlier app versions:</strong> Contact us at the address in §13 if the in-app option is not present, if you want assistance, or if you need to request deletion from a service provider. Providers may retain limited transaction, security, fraud-prevention, or legal-compliance records under their own policies and applicable law. EEA/UK users (GDPR) and California residents (CCPA/CPRA) have the additional rights described by those laws, including the right to lodge a complaint with a supervisory authority (EEA/UK) and the right to opt out of "sale"/"sharing" (California); we honor recognized opt-out signals where applicable.</p>
 
   <h2>11. Children's Privacy</h2>
