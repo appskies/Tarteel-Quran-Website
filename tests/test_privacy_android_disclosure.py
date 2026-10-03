@@ -91,9 +91,34 @@ class PrivacyAndroidDisclosure(unittest.TestCase):
         self.has("overpass-api.de", flat)  # nearby-mosque location recipient
 
     def test_new_android_text_has_no_em_dash(self):
-        self.has("<div", "<div" + android_block())  # block exists
         self.assertTrue(android_block(), "missing android block")
         self.lacks("—", android_block())
+
+    def test_premium_users_still_get_sdk_initialization_disclosed(self):
+        block = text_of(android_block())
+        self.matches(r"premium.*SDKs may still (start|initialize)", block)
+
+    def section(self, n: int) -> str:
+        m = re.search(rf"<h2>{n}\. .*?</h2>(.*?)(?=<h2>|</div>\s*</body>)", HTML, re.S)
+        return text_of(m.group(1)) if m else ""
+
+    def test_section5_legal_basis_matches_android_reality(self):
+        s5 = self.section(5)
+        self.assertTrue(s5, "section 5 not found")
+        self.matches(r"Consent:.*iOS.*ATT", s5)
+        self.matches(r"On Android.*does not (currently )?collect consent", s5)
+        self.matches(r"Legitimate interests:.*Android.*(advertising|ads)", s5)
+
+    def test_section8_sale_statement_is_qualified_for_android(self):
+        s8 = self.section(8)
+        self.matches(r"Android.*advertising ID.*(sale|sharing)", s8)
+        self.matches(r"(CCPA|CPRA|some laws).*(sale|sharing)", s8)
+
+    def test_section10_opt_out_wording_is_qualified_for_android(self):
+        s10 = self.section(10)
+        self.matches(r"Android.*no in-app.*opt-out", s10)
+        self.matches(r"(?i)delete your advertising ID", s10)
+        self.lacks("we honor recognized opt-out signals where applicable", s10)
 
     def test_last_updated_bumped(self):
         self.has("Last updated: October 3, 2026", text_of(HTML))
