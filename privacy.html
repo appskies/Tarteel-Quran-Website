@@ -29,7 +29,7 @@
 <div class="wrap">
   <a class="back" href="/">← Back to Home</a>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: September 10, 2026</p>
+  <p class="updated">Last updated: October 3, 2026</p>
 
   <h2>1. Introduction</h2>
   <p>This Privacy Policy explains how we ("we," "our," or "us," the developer of the <strong>Quran AI (AI Quran Reader)</strong> mobile application, the "App") collect, use, and share information when you use the App, available on the Apple App Store and on Google Play (Android package <code>com.skiestech.aiquran</code>). By downloading, installing, or using the App, you acknowledge that you have read and understood this Privacy Policy. If you do not agree, please do not use the App.</p>
@@ -50,10 +50,10 @@
 
   <h3>2.2 Information Collected Automatically</h3>
   <ul>
-    <li><strong>Device information:</strong> Device model, operating system and version, language and region settings, and device identifiers such as the Identifier for Vendors (IDFV). With your permission (see §4), we also access the Identifier for Advertisers (IDFA).</li>
+    <li><strong>Device information:</strong> Device model, operating system and version, language and region settings, and device identifiers. On iOS these include the Identifier for Vendors (IDFV) and, with your permission (see §4), the Identifier for Advertisers (IDFA). On Android they include the Android advertising ID (where available and not deleted by you) and app-instance identifiers assigned by Firebase and AppsFlyer (see §4).</li>
     <li><strong>Usage &amp; analytics data:</strong> How you interact with the App — features used, screens viewed, and session information — to understand and improve the App.</li>
     <li><strong>Diagnostic &amp; crash data:</strong> Crash reports and technical logs used to diagnose and fix problems.</li>
-    <li><strong>Location:</strong> If you grant location permission, the App uses your device location to calculate local prayer times and the Qibla direction. The App sends a derived city/country to its prayer-time content provider rather than your raw coordinates. Advertising and attribution providers may also infer an approximate location from network or device signals, subject to your choices and their policies.</li>
+    <li><strong>Location:</strong> If you grant location permission, the App uses your device location to calculate local prayer times and the Qibla direction. The App sends a derived city/country to its prayer-time content provider rather than your raw coordinates. On Android, the nearby-mosque feature sends the search center's coordinates (approximate or precise, depending on the location available) to the third-party Overpass service at <code>overpass-api.de</code>, sends a city name to Nominatim at <code>nominatim.openstreetmap.org</code> if the device geocoder cannot resolve a city, and loads OpenStreetMap map tiles, which discloses the displayed map area and your IP address to the tile service (see §9). Advertising and attribution providers may also infer an approximate location from network or device signals, subject to your choices and their policies.</li>
     <li><strong>Purchase information:</strong> Records of in-app purchases and subscriptions, where offered. Payment is processed by the relevant app store (Apple App Store or Google Play); we do not receive your payment card details.</li>
   </ul>
 
@@ -73,20 +73,27 @@
     <li><strong>Purchases:</strong> To process and restore your subscriptions and in-app purchases, where these features are offered.</li>
     <li><strong>Communication:</strong> To send technical notices and respond to your support requests.</li>
     <li><strong>Analytics &amp; improvement:</strong> To understand usage and improve the App.</li>
-    <li><strong>Advertising:</strong> To display and measure ads, including — with your permission — personalized ads (see §4).</li>
+    <li><strong>Advertising:</strong> To display and measure ads, including, on iOS and with your permission, personalized ads (see §4).</li>
     <li><strong>Safety &amp; legal:</strong> To detect and prevent fraud or abuse and to comply with applicable law.</li>
   </ul>
 
-  <h2>4. Advertising and App Tracking Transparency (ATT)</h2>
+  <h2>4. Advertising, Attribution and Analytics (ATT on iOS)</h2>
   <div class="note">
-    <p><strong>Platform note:</strong> This section applies to the <strong>iOS</strong> version of the App. The <strong>Android</strong> version currently includes no advertising, attribution or analytics SDKs, shows no ads, and does not access the Android advertising ID; the App Tracking Transparency (ATT) prompt and the IDFA described below are iOS-only.</p>
+    <p><strong>Platform note:</strong> The App Tracking Transparency (ATT) prompt and the IDFA are iOS-only. The paragraphs in this box describe the <strong>iOS</strong> version of the App. The <strong>Android</strong> version also shows ads and uses attribution and analytics SDKs; it is described in the separate box below.</p>
     <p>The free version of the App shows advertisements through <strong>Unity LevelPlay (ironSource)</strong>. The App also uses <strong>AppsFlyer</strong> to measure installs and sessions. These providers may process device identifiers, ad interactions, usage data, IP-derived approximate location, and related technical information to deliver and measure advertising and attribution. When the IDFA or cross-company data is used, Apple treats this as <strong>"tracking."</strong></p>
-    <p>Before starting these advertising and attribution SDKs, we show Apple's <strong>App Tracking Transparency (ATT)</strong> prompt and pass your choice to the advertising system:</p>
+    <p>On iOS, before starting these advertising and attribution SDKs, we show Apple's <strong>App Tracking Transparency (ATT)</strong> prompt and pass your choice to the advertising system:</p>
     <ul>
       <li><strong>If you allow tracking:</strong> the providers may access the IDFA to personalize and measure ads and attribute installs.</li>
       <li><strong>If you do not allow tracking:</strong> the App does not grant access to the IDFA. You may still see contextual or non-personalized ads, and attribution may use Apple's privacy-preserving mechanisms or other non-IDFA signals permitted by the platform.</li>
     </ul>
     <p>You can change ATT permission in <strong>iOS Settings › Privacy &amp; Security › Tracking</strong>. Users with an active premium (ad-free) subscription are not shown ads. Firebase Analytics and Crashlytics are used for first-party product analytics and diagnostics; they are not used by us to track you across other companies' apps or websites.</p>
+  </div>
+
+  <div class="note" id="android-advertising">
+    <p><strong>Android version:</strong> The free version of the Android app shows banner, interstitial and rewarded ads through <strong>Unity LevelPlay (ironSource)</strong> and its demand partners. It uses <strong>AppsFlyer</strong> to measure installs and sessions, and <strong>Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong> for product analytics and crash diagnostics. Users with an active premium (ad-free) subscription are not shown ads.</p>
+    <p><strong>Advertising ID and other data:</strong> These SDKs can read the <strong>Android advertising ID</strong> (a resettable identifier managed by Google Play services; the Android release build declares the <code>com.google.android.gms.permission.AD_ID</code> permission), together with other device identifiers, IP-derived approximate location, ad interactions, and install and in-app event data. This data is used to deliver and measure ads, attribute installs, prevent fraud, and understand how the App is used, and it is shared with LevelPlay, its demand partners and AppsFlyer. The Android app also links the AppsFlyer ID to your RevenueCat subscriber record once attribution is running.</p>
+    <p><strong>No ATT and no in-app consent prompt:</strong> Android has no ATT prompt; ATT is an Apple feature. The Android app also does not currently show its own consent prompt for advertising, attribution or analytics, and it does not use Google's User Messaging Platform. The App keeps these SDKs off until it finishes a start-up check (on first launch, when the home screen opens). It then starts Firebase Analytics, Crashlytics and AppsFlyer, and starts LevelPlay with personalized-ads consent set to "not granted." LevelPlay and its partners may still use the advertising ID for ad delivery, measurement and fraud prevention under their own policies.</p>
+    <p><strong>Your choices on Android:</strong> You can delete your advertising ID in your device settings, usually under <strong>Settings › Privacy › Ads › Delete advertising ID</strong> or <strong>Settings › Google › Ads</strong>, depending on your device and Android version. Older Android versions offer "Opt out of Ads Personalization" in the same place. On current Android versions, apps receive a string of zeros instead of an ID after you delete it. The App does not currently include an in-app switch to turn off analytics, crash reporting or attribution. To stop all collection by these SDKs, uninstall the App. To ask about or request deletion of data we hold, see §10 and §13.</p>
   </div>
 
   <h2>5. Legal Basis for Processing (EEA/UK Users)</h2>
@@ -119,12 +126,12 @@
   <ul>
     <li><strong>Apple</strong> — app distribution, in-app purchases, and subscriptions.</li>
     <li><strong>Google Play</strong> — app distribution and, where offered, in-app purchases and subscriptions.</li>
-    <li><strong>Google Firebase</strong> — anonymous authentication and app configuration. On iOS, Firebase also stores your optional email and referral records and provides analytics and crash reporting. On Android, Firebase hosts the AI callable and daily usage counters and provides App Check (Google Play Integrity) for request attestation; it does not store your onboarding email.</li>
+    <li><strong>Google Firebase</strong> — anonymous authentication and app configuration. On iOS, Firebase also stores your optional email and referral records and provides analytics and crash reporting. On Android, Firebase hosts the AI callable and daily usage counters and provides App Check (Google Play Integrity) for request attestation; it does not store your onboarding email. On Android, Firebase also provides analytics and crash reporting (see §4), and Firebase Cloud Messaging gives the App a push registration token, which the App stores on your device only.</li>
     <li><strong>Unity LevelPlay (ironSource)</strong> and its demand partners — advertising delivery and measurement (see §4).</li>
     <li><strong>AppsFlyer</strong> — install and session attribution (see §4).</li>
     <li><strong>RevenueCat</strong> — subscription management and related pseudonymous analytics, where used. The current App does not send newly submitted email addresses to RevenueCat. On iOS, for an email sent by an earlier version, the authenticated in-app flow queues a best-effort removal request through the RevenueCat SDK; because the SDK does not expose provider-side confirmation, contact us if you require confirmed provider deletion.</li>
     <li><strong>OpenAI</strong> — processes the messages you send to the in-app AI assistant to generate responses. On iOS, <strong>AIProxy</strong> relays these requests to OpenAI.</li>
-    <li><strong>Content providers</strong> — public APIs used to deliver prayer-time calculations and Quran recitation/text content.</li>
+    <li><strong>Content providers</strong> — public APIs used to deliver prayer-time calculations and Quran recitation/text content. On Android, the nearby-mosque feature also uses OpenStreetMap services (Overpass, Nominatim and map tiles); see §2.2 and the <a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation Privacy Policy</a>.</li>
   </ul>
 
   <h3>AI Assistant Data</h3>
