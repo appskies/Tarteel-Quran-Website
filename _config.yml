@@ -1,0 +1,4 @@
+# GitHub Pages (Jekyll) build: keep dev-only files out of the published site
+exclude:
+  - tests
+  - README.md
