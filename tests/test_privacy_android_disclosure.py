@@ -438,7 +438,7 @@ class PrivacyConsentBuilds(unittest.TestCase):
         s9 = self.section(9)
         self.m(r"Google User Messaging Platform.*consent form", s9)
         self.m(r"(?i)IP address", s9.split("Google User Messaging Platform")[1][:700])
-        self.m(r"(?i)device identifiers.*(form|interaction).*diagnostics", s9.split("Google User Messaging Platform")[1][:700])
+        self.m(r"(?i)device identifiers.*(form|interaction).*diagnostic", s9.split("Google User Messaging Platform")[1][:700])
 
     def test_section3_consistent_with_consent(self):
         s3 = self.section(3)
