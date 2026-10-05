@@ -127,9 +127,9 @@ class PrivacyAndroidDisclosure(unittest.TestCase):
         self.lacks("we honor recognized opt-out signals where applicable", s10)
 
     def test_last_updated_bumped(self):
-        # Outdated pin updated: October 4 -> October 5, 2026.
-        self.has("Last updated: October 5, 2026", text_of(HTML))
-        self.lacks("October 4, 2026", text_of(HTML))
+        # Pin updated: October 5 -> October 6, 2026 (AI report paragraph).
+        self.has("Last updated: October 6, 2026", text_of(HTML))
+        self.lacks("October 5, 2026", text_of(HTML))
         self.lacks("October 3, 2026", text_of(HTML))
 
     def test_markup_is_balanced(self):
@@ -342,6 +342,50 @@ class PrivacyConsentBuilds(unittest.TestCase):
     def lacks(self, needle, hay=None):
         hay = self.flat if hay is None else hay
         self.assertTrue(needle not in hay, f"must not appear: {needle!r}")
+
+    def test_ai_report_storage_is_disclosed(self):
+        body = text_of(HTML)
+        self.assertIn("Reporting an AI response", body)
+        self.m(r"deleted automatically about 90 days", body)
+        self.assertIn("without your Firebase user ID", body)
+        self.assertIn("capped at 20 per day", body)
+        self.assertIn("except for an AI reply you choose to report", body)
+
+    def test_ai_report_is_in_every_section_that_describes_ai_data(self):
+        """Every sentence that said the Android AI data is never stored must stay true:
+        the processor list, the collected-data list, the deletion carve-outs and the server
+        logs paragraph all have to acknowledge reportAiMessage / reported replies."""
+        # Section 9 processor list names the new callable and the report store.
+        firebase = re.search(r"<li><strong>Google Firebase</strong>(.*?)</li>", HTML, re.S)
+        self.assertIsNotNone(firebase, "Google Firebase processor bullet not found")
+        fb = text_of(firebase.group(1))
+        self.assertIn("reportAiMessage", fb)
+        self.assertIn("aiReports", fb)
+        self.assertIn("aiChat", fb)
+        # Section 2 lists reported replies as data we collect, scoped to the version.
+        s2 = self.section(2)
+        self.m(r"Reported AI replies \(Android version code 9 and later\)", s2)
+        self.m(r"(?i)only if you choose to report", s2)
+        # Section 6: Delete My Data does not remove reported replies (no uid is stored with them).
+        keep = re.search(r"<li><strong>What Android Delete My Data does not delete:</strong>(.*?)</li>", HTML, re.S)
+        self.assertIsNotNone(keep, "Delete My Data carve-out bullet not found")
+        self.m(r"does not delete AI replies you reported", text_of(keep.group(1)))
+        # Server logs: report requests log only the outcome and reason code.
+        logs = re.search(r"<h3>Server Logs</h3>(.*?)<h3>", HTML, re.S)
+        self.assertIsNotNone(logs, "Server Logs paragraph not found")
+        lg = text_of(logs.group(1))
+        self.m(r"report an AI response.*only the outcome and the reason code", lg)
+        self.m(r"not (?:the reply text|your Firebase UID)", lg)
+
+    def test_ai_report_is_scoped_to_version_code_9_everywhere(self):
+        """Android version code 8 and earlier send nothing to reportAiMessage (the Report
+        button opens a mail draft), so every block that talks about reports must say 9+."""
+        blocks = re.findall(r"<(li|p)(?:\s[^>]*)?>(.*?)</\1>", HTML, re.S)
+        mention = re.compile(r"(?i)reportAiMessage|report(?:ing|ed)? (?:an )?AI (?:response|repl)|AI repl(?:y|ies) you (?:choose to )?report(?:ed)?")
+        hits = [text_of(body) for _, body in blocks if mention.search(text_of(body))]
+        self.assertGreaterEqual(len(hits), 7, f"expected report mentions in at least 7 blocks, got {len(hits)}")
+        for text in hits:
+            self.assertIn("version code 9", text, f"unscoped AI-report mention: {text[:120]!r}")
 
     def test_version_labels_are_defined(self):
         s1 = self.section(1)
