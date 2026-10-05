@@ -262,8 +262,10 @@ class PrivacyMatchesCurrentCode(unittest.TestCase):
         self.matches(r"(?i)religious beliefs.*special[- ]category", self.flat)
         self.matches(r"(?i)optional.*only when you choose to send a message", self.flat)
         self.matches(r"(?i)explicit action", self.flat)
-        self.matches(r"Android.*notice.*accept.*before your first (AI )?message", self.flat)
-        self.matches(r"iOS.*does not show a separate AI consent", self.flat)
+        self.matches(r"notice.*(iOS|AIProxy).*Android.*accept.*nothing is sent until you accept", self.flat)
+        self.matches(r"(?i)declining keeps your draft and sends nothing", self.flat)
+        self.matches(r"iOS and Android you also accept a notice before your first message", self.flat)
+        self.lacks("does not show a separate AI consent")
 
     def test_ios_attribution_before_att_is_disclosed(self):
         self.has("AdServices", self.section(4))
