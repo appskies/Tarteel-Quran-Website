@@ -177,6 +177,14 @@ class BrandAndClaims(unittest.TestCase):
         # "Athkar" only inside the App Store listing name.
         self.assertNotIn("athkar", flat.replace("ai quran reader athkar tarteel", ""))
 
+    def test_translation_claims_state_the_arabic_exception(self):
+        # Both apps hide the translation when the device language is Arabic
+        # (Android AyahRow.kt isArabicLocale, iOS AyahCell.swift isArabic), so "a translation
+        # alongside" is only true with that exception. The Play listing states it too.
+        flat = visible_text(INDEX).lower()
+        self.assertGreaterEqual(flat.count("device language is arabic"), 2,
+                                "feature card and translations card must both carry the Arabic exception")
+
     def test_offline_claim_is_scoped(self):
         flat = visible_text(INDEX)
         self.assertIn("needs an internet connection to start", flat)
