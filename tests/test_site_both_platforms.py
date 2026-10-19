@@ -200,9 +200,15 @@ class BrandAndClaims(unittest.TestCase):
         self.assertRegex(flat, r"(?i)fatwa")
         self.assertRegex(flat, r"(?i)Premium")
 
-    def test_testimonials_are_labelled_per_platform(self):
+    def test_testimonials_have_no_platform_label_or_user_count(self):
+        # Owner decision 2026-10-19: keep the testimonials, without an iPhone or Android
+        # label and without an unverifiable "thousands of users" count.
         section = re.search(r'<section class="testimonials".*?</section>', INDEX, re.S).group(0)
-        self.assertRegex(visible_text(section), r"(?i)iPhone")
+        heading = re.search(r'<h2 class="section-title">(.*?)</h2>\s*<p class="section-subtitle">(.*?)</p>', section, re.S)
+        self.assertIsNotNone(heading, "testimonials heading/subtitle missing")
+        label = " ".join(heading.groups())
+        self.assertEqual(heading.group(1).strip(), "What Our Users Say")
+        self.assertNotRegex(label, r"(?i)iphone|android|thousands")
 
     def test_social_image_is_absolute(self):
         content = {m.get("property") or m.get("name"): m.get("content") for m in INDEX_P.metas}
