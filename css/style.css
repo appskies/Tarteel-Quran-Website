@@ -1379,5 +1379,10 @@ h1, h2, h3, h4, h5, h6 {
 .spinner {display: inline-block; width: 16px; height: 16px; border: 2px solid rgba(255, 255, 255, 0.3); border-top-color: white; border-radius: 50%; animation: spin 0.8s linear infinite; margin-right: 8px; vertical-align: middle;}
 @keyframes spin {to {transform: rotate(360deg);}}
 @keyframes fadeInStatus {from {opacity: 0; transform: translateY(-10px);} to {opacity: 1; transform: translateY(0);}}
+.btn {display: inline-flex; align-items: center; justify-content: center; font-family: inherit; font-size: 1rem; line-height: 1.2;}
+.btn-primary {width: 100%; padding: 16px 32px; border: none; border-radius: 12px; background: var(--gradient-gold); color: var(--primary-dark); font-weight: 600; cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;}
+.btn-primary:hover:not(:disabled) {transform: translateY(-2px); box-shadow: var(--shadow-gold);}
+.btn-primary:focus-visible {outline: 2px solid var(--accent-gold-light); outline-offset: 3px;}
+.btn-primary .spinner {border-color: rgba(10, 31, 31, 0.3); border-top-color: var(--primary-dark);}
 .btn-primary:disabled {opacity: 0.7; cursor: not-allowed; transform: none !important;}
 @media (max-width: 768px) {.contact-section {padding: 100px 0 60px;} .contact-header .section-title {font-size: 2.5rem;} .contact-header .section-subtitle {font-size: 1.05rem;} .contact-content {grid-template-columns: 1fr; gap: 40px;} .contact-form-wrapper {padding: 30px 20px;}}
