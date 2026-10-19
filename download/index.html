@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta name="description" content="Download AI Quran for iPhone from the App Store or for Android from Google Play.">
+    <title>Download AI Quran</title>
+
+    <link rel="icon" type="image/png" href="/Assets/app-icon.png">
+    <link rel="apple-touch-icon" href="/Assets/app-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- QR landing: send iPhone/iPad to the App Store and Android to Google Play.
+         Everything else (and any browser with JavaScript off) keeps this page with both badges. -->
+    <script>
+    (function () {
+        var APP_STORE_URL = 'https://apps.apple.com/us/app/ai-quran-reader-athkar-tarteel/id6749589788';
+        var PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.skiestech.aiquran';
+        var ua = navigator.userAgent || '';
+        // iPadOS 13+ reports a desktop Mac user agent; touch support tells it apart from a real Mac.
+        var isIPadOS = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+        if (/iPhone|iPad|iPod/i.test(ua) || isIPadOS) {
+            window.location.replace(APP_STORE_URL);
+        } else if (/Android/i.test(ua)) {
+            window.location.replace(PLAY_STORE_URL);
+        }
+    })();
+    </script>
+</head>
+<body>
+    <main class="download-page">
+        <div class="download-panel">
+            <a href="/" class="navbar-brand">
+                <img src="/Assets/app-icon.png" alt="AI Quran logo" class="navbar-logo">
+                <span class="navbar-name">AI Quran</span>
+            </a>
+            <h1>Download AI Quran</h1>
+            <p class="download-card-text">Choose your store to get the app on iPhone or Android.</p>
+            <div class="store-badges center">
+                <a href="https://apps.apple.com/us/app/ai-quran-reader-athkar-tarteel/id6749589788" class="app-store-link">
+                    <img src="/Assets/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.skiestech.aiquran" class="app-store-link">
+                    <img src="/Assets/google-play-badge.png" alt="Get it on Google Play" class="play-badge">
+                </a>
+            </div>
+            <p class="store-names">
+                <strong>App Store:</strong> AI Quran Reader Athkar Tarteel<br>
+                <strong>Google Play:</strong> AiQuran: Quran, Prayer &amp; Dua
+            </p>
+            <a href="/" class="download-home">Visit tarteelquran.app</a>
+        </div>
+    </main>
+</body>
+</html>

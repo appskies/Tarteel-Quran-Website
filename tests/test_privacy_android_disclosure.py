@@ -321,7 +321,7 @@ class PrivacyMatchesCurrentCode(unittest.TestCase):
     def test_terms_do_not_claim_blanket_consent(self):
         flat = text_of(TERMS)
         self.lacks("you consent to the collection and use of your information as described", flat)
-        self.has("Last updated: October 4, 2026", flat)
+        self.has("Last updated: October 19, 2026", flat)  # bumped with the brand and services pass
 
 
 class PrivacyConsentBuilds(unittest.TestCase):
