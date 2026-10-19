@@ -1360,11 +1360,13 @@ h1, h2, h3, h4, h5, h6 {
 .contact-header .section-subtitle {font-size: 1.2rem; color: var(--text-light, rgba(255, 255, 255, 0.7)); max-width: 700px; margin: 0 auto;}
 .contact-content {display: grid; grid-template-columns: 1fr 2fr; gap: 60px; max-width: 1200px; margin: 0 auto;}
 .contact-info {display: flex; flex-direction: column; gap: 30px;}
+.contact-content > * {min-width: 0;}
+.info-item > div {min-width: 0;}
 .info-item {display: flex; align-items: flex-start; gap: 20px; padding: 30px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; transition: all 0.3s ease;}
 .info-item:hover {background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.2); transform: translateY(-5px);}
 .info-icon {font-size: 2.5rem; line-height: 1;}
 .info-item h3 {font-size: 1.1rem; margin-bottom: 8px; color: var(--primary, #4f46e5); text-transform: uppercase; letter-spacing: 1px;}
-.info-item p {color: var(--text-light, rgba(255, 255, 255, 0.8)); font-size: 1.05rem; line-height: 1.7;}
+.info-item p {color: var(--text-light, rgba(255, 255, 255, 0.8)); font-size: 1.05rem; line-height: 1.7; overflow-wrap: anywhere;}
 .contact-form-wrapper {background: rgba(255, 255, 255, 0.05); padding: 50px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);}
 .contact-form {display: flex; flex-direction: column; gap: 24px;}
 .form-group {display: flex; flex-direction: column; gap: 10px;}
@@ -1380,4 +1382,7 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes spin {to {transform: rotate(360deg);}}
 @keyframes fadeInStatus {from {opacity: 0; transform: translateY(-10px);} to {opacity: 1; transform: translateY(0);}}
 .btn-primary:disabled {opacity: 0.7; cursor: not-allowed; transform: none !important;}
+@media (max-width: 480px) {.info-item {padding: 20px; gap: 14px;}}
+/* The Web3Forms hCaptcha iframe is a fixed 302px wide; scale it down where the form card is narrower than that (<= 350px viewports). */
+@media (max-width: 350px) {.h-captcha {transform: scale(0.8); transform-origin: left top; margin-bottom: -16px;}}
 @media (max-width: 768px) {.contact-section {padding: 100px 0 60px;} .contact-header .section-title {font-size: 2.5rem;} .contact-header .section-subtitle {font-size: 1.05rem;} .contact-content {grid-template-columns: 1fr; gap: 40px;} .contact-form-wrapper {padding: 30px 20px;}}
