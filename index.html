@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tarteel - AI Quran Reader with Athkar, Dua, Prayer Times, Tafsir and Khatmah Tracker. Begin your peaceful Quran journey with beautiful recitations.">
-    <meta name="keywords" content="quran, quran reader, tarteel, athkar, dua, prayer times, tafsir, khatmah, islamic app, muslim app, adhan, salat">
-    <meta name="author" content="Tarteel">
+    <meta name="description" content="AI Quran: read the Quran with translations, listen to recitation, and use prayer times, Qibla, Dua and Tasbih. Available on iPhone and Android.">
+    <meta name="keywords" content="quran, quran reader, ai quran, quran app, dua, dhikr, tasbih, prayer times, qibla, hijri calendar, ramadan, islamic app, muslim app, iphone, android">
+    <meta name="author" content="Appskies">
+    <link rel="canonical" href="https://tarteelquran.app/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AI Quran">
     <meta property="og:url" content="https://tarteelquran.app/">
-    <meta property="og:title" content="Tarteel - AI Quran Reader">
-    <meta property="og:description" content="Begin your peaceful Quran journey. Quran Reading, Tarteel Recitations, Athkar, Dua & Prayer Times.">
-    <meta property="og:image" content="Assets/hero.webp">
+    <meta property="og:title" content="AI Quran: Quran, Prayer Times &amp; Dua">
+    <meta property="og:description" content="Read the Quran with translations, listen to recitation, and follow prayer times, Qibla, Dua and Tasbih. On iPhone and Android.">
+    <meta property="og:image" content="https://tarteelquran.app/Assets/hero.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://tarteelquran.app/">
-    <meta property="twitter:title" content="Tarteel - AI Quran Reader">
-    <meta property="twitter:description" content="Begin your peaceful Quran journey. Quran Reading, Tarteel Recitations, Athkar, Dua & Prayer Times.">
-    <meta property="twitter:image" content="Assets/hero.webp">
+    <meta property="twitter:title" content="AI Quran: Quran, Prayer Times &amp; Dua">
+    <meta property="twitter:description" content="Read the Quran with translations, listen to recitation, and follow prayer times, Qibla, Dua and Tasbih. On iPhone and Android.">
+    <meta property="twitter:image" content="https://tarteelquran.app/Assets/hero.webp">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="Assets/app-icon.png">
@@ -33,22 +35,57 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Tarteel - AI Quran Reader</title>
+    <title>AI Quran: Quran Reader, Prayer Times &amp; Dua for iPhone and Android</title>
+
+    <!-- Structured data: one app, two stores -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AI Quran",
+      "alternateName": ["AI Quran Reader Athkar Tarteel", "AiQuran: Quran, Prayer & Dua"],
+      "url": "https://tarteelquran.app/",
+      "image": "https://tarteelquran.app/Assets/app-icon.png",
+      "description": "Read the Quran with translations, listen to recitation, and use prayer times, Qibla, Dua and Tasbih on iPhone and Android.",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "iOS, Android",
+      "publisher": { "@type": "Organization", "name": "Appskies" },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "App Store",
+          "price": "0",
+          "priceCurrency": "USD",
+          "url": "https://apps.apple.com/us/app/ai-quran-reader-athkar-tarteel/id6749589788"
+        },
+        {
+          "@type": "Offer",
+          "name": "Google Play",
+          "price": "0",
+          "priceCurrency": "USD",
+          "url": "https://play.google.com/store/apps/details?id=com.skiestech.aiquran"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container navbar-container">
             <a href="/" class="navbar-brand">
-                <img src="Assets/app-icon.png" alt="Tarteel Logo" class="navbar-logo">
-                <span class="navbar-name">Tarteel</span>
+                <img src="Assets/app-icon.png" alt="AI Quran logo" class="navbar-logo">
+                <span class="navbar-name">AI Quran</span>
             </a>
             <div class="navbar-menu" id="navbarMenu">
                 <a href="/" class="navbar-link">Home</a>
                 <a href="#features" class="navbar-link">Features</a>
                 <a href="contact.html" class="navbar-link">Contact</a>
-                <a href="https://apps.apple.com/us/app/ai-quran-reader-athkar-dua/id6749589788" class="navbar-cta">
+                <a href="https://apps.apple.com/us/app/ai-quran-reader-athkar-tarteel/id6749589788" class="navbar-cta">
                     <img src="Assets/app-store-badge.svg" alt="Download on the App Store" class="navbar-badge">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.skiestech.aiquran" class="navbar-cta">
+                    <img src="Assets/google-play-badge.png" alt="Get it on Google Play" class="navbar-play-badge">
                 </a>
             </div>
             <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle menu">
@@ -67,29 +104,34 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">Begin Your <span class="highlight">Peaceful</span> Quran Journey</h1>
-                <p class="hero-subtitle">Experience the beauty of Quran reading with AI-powered features. Tarteel recitations, Athkar, Dua, Prayer Times & Khatmah Tracker - all in one app.</p>
+                <p class="hero-subtitle">Read the Quran with translations, listen to recitation, and keep up with prayer times, Qibla, Dua and Tasbih on iPhone and Android. An optional AI assistant is part of Premium.</p>
                 <div class="hero-cta">
-                    <a href="https://apps.apple.com/us/app/ai-quran-reader-athkar-dua/id6749589788?itscg=30200&itsct=apps_box_badge&mttnsubad=6749589788" class="app-store-link">
-                        <img src="Assets/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge">
-                    </a>
+                    <div class="store-badges">
+                        <a href="https://apps.apple.com/us/app/ai-quran-reader-athkar-tarteel/id6749589788?itscg=30200&amp;itsct=apps_box_badge&amp;mttnsubad=6749589788" class="app-store-link">
+                            <img src="Assets/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.skiestech.aiquran" class="app-store-link">
+                            <img src="Assets/google-play-badge.png" alt="Get it on Google Play" class="play-badge">
+                        </a>
+                    </div>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-icon">&#9733;</span>
-                        <span class="stat-value">4.8</span>
-                        <span class="stat-label">App Store Rating</span>
-                    </div>
                     <div class="stat">
                         <span class="stat-icon">&#128214;</span>
                         <span class="stat-value">114</span>
                         <span class="stat-label">Surahs Available</span>
                     </div>
+                    <div class="stat">
+                        <span class="stat-icon">&#127760;</span>
+                        <span class="stat-value">34</span>
+                        <span class="stat-label">App Languages</span>
+                    </div>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="hero-image-slider">
-                    <img src="Assets/hero.webp" alt="Tarteel Quran App Screenshot" class="phone-mockup hero-slide active" data-index="0">
-                    <img src="Assets/feature-reading.webp" alt="Easy Quran Reading" class="phone-mockup hero-slide" data-index="1">
+                    <img src="Assets/hero.webp" alt="AI Quran, a Quran assistant for iPhone and Android" class="phone-mockup hero-slide active" data-index="0">
+                    <img src="Assets/feature-reading.webp" alt="Easy Quran reading with large, clear text" class="phone-mockup hero-slide" data-index="1">
                 </div>
             </div>
         </div>
@@ -99,71 +141,73 @@
     <section class="features" id="features">
         <div class="container">
             <h2 class="section-title">Discover Your Path</h2>
-            <p class="section-subtitle">Everything you need for your spiritual journey</p>
+            <p class="section-subtitle">Quran reading, prayer times and daily dhikr in one app</p>
 
             <div class="features-grid">
-                <!-- Feature 1: Prayer Times & Journey -->
+                <!-- Feature 1: Prayer Times & Reminders -->
                 <div class="feature-card full-width">
                     <div class="feature-image large">
-                        <img src="Assets/feature-prayer-journey.webp" alt="Prayer Times and Quran Journey">
+                        <img src="Assets/feature-prayer-journey.webp" alt="Prayer times screen with a countdown to the next prayer, and the Quran reader">
                     </div>
                     <div class="feature-content">
                         <span class="feature-icon">&#128336;</span>
-                        <h3 class="feature-title">Prayer Times & Adhan Reminders</h3>
-                        <p class="feature-description">Track the latest Adhan times and never miss a prayer. Stay consistent with timely prayer notifications. Begin your Quran journey today!</p>
+                        <h3 class="feature-title">Prayer Times &amp; Reminders</h3>
+                        <p class="feature-description">Check prayer times for your city, with the Hijri date and a countdown to the next prayer time. Turn on optional reminders for prayer times, subject to your device's notification settings. Reminders use the default notification sound and do not play an adhan. The Qibla compass uses your location and your phone's compass.</p>
                     </div>
                 </div>
 
-                <!-- Feature 3: Athkar & Tafsir -->
+                <!-- Feature 2: Dua & Reading Goals -->
                 <div class="feature-card full-width">
                     <div class="feature-image large">
-                        <img src="Assets/feature-athkar-tafsir.webp" alt="Athkar and Tafsir">
+                        <img src="Assets/feature-athkar-tafsir.webp" alt="Dua categories and daily Quran reading goals">
                     </div>
                     <div class="feature-content">
                         <span class="feature-icon">&#10026;</span>
-                        <h3 class="feature-title">Daily Athkar & Tafsir</h3>
-                        <p class="feature-description">Access morning and evening Athkar with translations. Dive deep into Quranic understanding with comprehensive Tafsir explanations.</p>
+                        <h3 class="feature-title">Dua Collection &amp; Reading Goals</h3>
+                        <p class="feature-description">Browse duas for everyday situations, including Morning &amp; Evening, with Arabic, transliteration and meaning. Set daily reading goals by pages, juz or minutes and keep your reading streak going.</p>
                     </div>
                 </div>
 
-                <!-- Feature 4: Dua & Khatmah -->
+                <!-- Feature 3: Tasbih & Quran Reader -->
                 <div class="feature-card full-width">
                     <div class="feature-image large">
-                        <img src="Assets/feature-dua-khatmah.webp" alt="Dua and Khatmah Tracker">
+                        <img src="Assets/feature-dua-khatmah.webp" alt="Dhikr and Tasbih counter, and the Quran reader with translation">
                     </div>
                     <div class="feature-content">
                         <span class="feature-icon">&#128591;</span>
-                        <h3 class="feature-title">Dua Collection & Khatmah Tracker</h3>
-                        <p class="feature-description">Browse through beautiful Duas for every occasion. Track your Quran reading progress with the Khatmah tracker and complete your journey.</p>
+                        <h3 class="feature-title">Tasbih Counter &amp; Quran Reader</h3>
+                        <p class="feature-description">Keep count of your dhikr with a digital Tasbih that remembers your count, and explore the 99 Names of Allah with their meanings. Read all 114 surahs in Arabic with a translation alongside.</p>
                     </div>
                 </div>
             </div>
+
+            <p class="features-note">AI Quran Premium is an optional auto-renewing subscription. It includes the AI assistant, three more reciters and surah downloads. AI answers can be inaccurate and are general information, not a religious ruling (fatwa) or a substitute for a qualified scholar. Check important matters with a trusted source.</p>
         </div>
     </section>
 
-    <!-- Why Tarteel Section -->
+    <!-- Why AI Quran Section -->
     <section class="why-tarteel" id="why">
         <div class="container">
-            <h2 class="section-title">Why Choose Tarteel?</h2>
-            <p class="section-subtitle">Your complete Islamic companion</p>
+            <h2 class="section-title">Why Choose AI Quran?</h2>
+            <p class="section-subtitle">A simple companion for your daily Quran reading</p>
 
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <span class="benefit-icon">&#127775;</span>
-                    <h3 class="benefit-title">Beautiful Recitations</h3>
-                    <p class="benefit-description">Listen to Quran in Tarteel style with multiple renowned Qaris. Experience the beauty of proper Tajweed recitation.</p>
+                    <h3 class="benefit-title">Listen to Recitation</h3>
+                    <p class="benefit-description">Listen ayah by ayah, and repeat an ayah or a whole surah. Premium adds three more reciters and surah downloads for offline listening. Audio streams over the internet.</p>
                 </div>
 
                 <div class="benefit-card">
-                    <span class="benefit-icon">&#128274;</span>
-                    <h3 class="benefit-title">Offline Access</h3>
-                    <p class="benefit-description">Download and access the Quran anywhere, anytime. No internet required for your daily reading and reflection.</p>
+                    <span class="benefit-icon">&#128214;</span>
+                    <h3 class="benefit-title">Quran Text Built In</h3>
+                    <p class="benefit-description">The Arabic text and translations are included in the app, so reading keeps working if your connection drops. AI Quran needs an internet connection to start, and audio and the AI assistant need one too.</p>
                 </div>
 
                 <div class="benefit-card">
                     <span class="benefit-icon">&#127760;</span>
-                    <h3 class="benefit-title">Multi-Language Support</h3>
-                    <p class="benefit-description">Read translations in multiple languages. Understand the meaning of every verse with clear explanations.</p>
+                    <h3 class="benefit-title">Translations in Many Languages</h3>
+                    <p class="benefit-description">Read a translation beside the Arabic text. It follows your device language, and English is used when a language is not available. The app itself comes in 34 languages.</p>
                 </div>
             </div>
         </div>
@@ -172,8 +216,8 @@
     <!-- Testimonials Section -->
     <section class="testimonials" id="reviews">
         <div class="container">
-            <h2 class="section-title">What Our Users Say</h2>
-            <p class="section-subtitle">Join thousands of Muslims worldwide</p>
+            <h2 class="section-title">What iPhone Users Say</h2>
+            <p class="section-subtitle">Feedback on the iPhone app</p>
 
             <div class="testimonials-slider">
                 <button class="slider-arrow slider-prev" aria-label="Previous testimonial">
@@ -270,25 +314,30 @@
         </div>
     </section>
 
-    <!-- App Store Rating Section -->
-    <section class="app-rating">
+    <!-- Download Section -->
+    <section class="app-rating" id="download">
         <div class="container">
             <div class="rating-card">
                 <div class="rating-content">
-                    <div class="rating-stars">
-                        <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                    </div>
-                    <div class="rating-score">4.8 <span class="rating-max">/ 5</span></div>
-                    <p class="rating-text">Based on App Store reviews</p>
-                    <p class="rating-subtext">Join thousands of Muslims enriching their faith</p>
+                    <h2 class="download-card-title">Get AI Quran on iPhone and Android</h2>
+                    <p class="download-card-text">Read the Quran, follow prayer times and keep up your daily dua and dhikr, wherever you are.</p>
+                    <p class="store-names">
+                        <strong>App Store:</strong> AI Quran Reader Athkar Tarteel<br>
+                        <strong>Google Play:</strong> AiQuran: Quran, Prayer &amp; Dua
+                    </p>
                 </div>
                 <div class="rating-badges">
-                    <a href="https://apps.apple.com/us/app/ai-quran-reader-athkar-dua/id6749589788?itscg=30200&itsct=apps_box_badge&mttnsubad=6749589788" class="app-store-link">
-                        <img src="Assets/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge-large">
-                    </a>
+                    <div class="store-badges">
+                        <a href="https://apps.apple.com/us/app/ai-quran-reader-athkar-tarteel/id6749589788?itscg=30200&amp;itsct=apps_box_badge&amp;mttnsubad=6749589788" class="app-store-link">
+                            <img src="Assets/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge-large">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.skiestech.aiquran" class="app-store-link">
+                            <img src="Assets/google-play-badge.png" alt="Get it on Google Play" class="play-badge-large">
+                        </a>
+                    </div>
                     <div class="qr-code">
-                        <img src="Assets/qr-code-5.png" alt="Scan to Download">
-                        <span>Scan to download</span>
+                        <img src="Assets/qr-code-download.png" alt="QR code for tarteelquran.app/download, which opens the App Store on iPhone and Google Play on Android" width="164" height="164">
+                        <span>Scan to download on iPhone or Android</span>
                     </div>
                 </div>
             </div>
@@ -299,10 +348,15 @@
     <section class="final-cta">
         <div class="container">
             <h2 class="cta-title">Start Your Quran Journey Today</h2>
-            <p class="cta-subtitle">Download Tarteel and enrich your life with the Quran</p>
-            <a href="https://apps.apple.com/us/app/ai-quran-reader-athkar-dua/id6749589788?itscg=30200&itsct=apps_box_badge&mttnsubad=6749589788" class="app-store-link">
-                <img src="Assets/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge">
-            </a>
+            <p class="cta-subtitle">Download AI Quran for iPhone or Android and take the Quran, prayer times and daily dua with you</p>
+            <div class="store-badges center">
+                <a href="https://apps.apple.com/us/app/ai-quran-reader-athkar-tarteel/id6749589788?itscg=30200&amp;itsct=apps_box_badge&amp;mttnsubad=6749589788" class="app-store-link">
+                    <img src="Assets/app-store-badge.svg" alt="Download on the App Store" class="app-store-badge">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.skiestech.aiquran" class="app-store-link">
+                    <img src="Assets/google-play-badge.png" alt="Get it on Google Play" class="play-badge">
+                </a>
+            </div>
         </div>
     </section>
 
@@ -311,15 +365,15 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="Assets/app-icon.png" alt="Tarteel Logo" class="footer-logo">
-                    <span class="footer-name">Tarteel</span>
+                    <img src="Assets/app-icon.png" alt="AI Quran logo" class="footer-logo">
+                    <span class="footer-name">AI Quran</span>
                 </div>
                 <nav class="footer-links">
                     <a href="privacy.html">Privacy Policy</a>
                     <a href="terms.html">Terms of Service</a>
                     <a href="contact.html">Contact</a>
                 </nav>
-                <p class="footer-copyright">&copy; 2024 Tarteel. All rights reserved.</p>
+                <p class="footer-copyright">&copy; 2026 Appskies. All rights reserved.</p>
             </div>
         </div>
     </footer>

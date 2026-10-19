@@ -1,17 +1,31 @@
 /**
- * Tarteel Quran - Main JavaScript
+ * AI Quran - Main JavaScript
  * Handles animations, scroll effects, and interactivity
  */
 
 // Debug log
-console.log('Tarteel Quran JS loaded');
+console.log('AI Quran JS loaded');
 
-// App Store URL
-const APP_STORE_URL = 'https://apps.apple.com/us/app/ai-quran-reader-athkar-dua/id6749589788';
+// Store URLs (keep in sync with the badges in index.html and download/index.html)
+const APP_STORE_URL = 'https://apps.apple.com/us/app/ai-quran-reader-athkar-tarteel/id6749589788';
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.skiestech.aiquran';
+
+/**
+ * Store for the visitor's platform: App Store on iPhone/iPad, Google Play on Android,
+ * null on anything else (desktop browsers keep the page and its two badges).
+ */
+function getStoreUrl() {
+    const userAgent = navigator.userAgent || '';
+    // iPadOS 13+ reports a desktop Mac user agent; touch support tells it apart from a real Mac.
+    const isIPadOS = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+    if (/iPhone|iPad|iPod/i.test(userAgent) || isIPadOS) return APP_STORE_URL;
+    if (/Android/i.test(userAgent)) return PLAY_STORE_URL;
+    return null;
+}
 
 /**
  * TikTok In-App Browser Detection & Workaround
- * TikTok blocks App Store links in their WebView, so we detect it and show instructions
+ * TikTok blocks store links in its WebView, so we detect it and show instructions
  */
 function initTikTokWorkaround() {
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -19,14 +33,14 @@ function initTikTokWorkaround() {
     // Check for TikTok's in-app browser
     const isTikTokBrowser = /musical_ly|BytedanceWebview|TikTok/i.test(userAgent);
 
-    // Check if URL has tiktok param (user opened in Safari from TikTok)
+    // Check if URL has tiktok param (user opened in their real browser from TikTok)
     const urlParams = new URLSearchParams(window.location.search);
     const fromTikTok = urlParams.get('from') === 'tiktok';
 
     if (isTikTokBrowser) {
         console.log('TikTok in-app browser detected');
 
-        // Add param to URL so Safari knows to redirect
+        // Add param to URL so the real browser knows to redirect
         if (!fromTikTok) {
             const newUrl = new URL(window.location.href);
             newUrl.searchParams.set('from', 'tiktok');
@@ -35,9 +49,12 @@ function initTikTokWorkaround() {
 
         showTikTokToast();
     } else if (fromTikTok) {
-        // User opened in Safari from TikTok - redirect to App Store
-        console.log('Opened from TikTok in real browser - redirecting to App Store');
-        window.location.href = APP_STORE_URL;
+        // User opened in their real browser from TikTok - send them to the store for their platform
+        const storeUrl = getStoreUrl();
+        if (storeUrl) {
+            console.log('Opened from TikTok in real browser - redirecting to the store');
+            window.location.href = storeUrl;
+        }
     }
 }
 
